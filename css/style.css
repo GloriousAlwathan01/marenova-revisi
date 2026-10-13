@@ -1000,9 +1000,10 @@ nav ul a.on {
 
 .lg {
     flex: none;
-    width: 170px;
-    height: 76px;
-    display: grid;
+    width: 180px;
+    height: 90px;
+    display: flex;
+    padding: 12px 20px;
     place-items: center;
     border: 2px dashed var(--line);
     border-radius: 12px;
@@ -1010,6 +1011,7 @@ nav ul a.on {
     font-size: .85rem;
     font-weight: 600
 }
+
 
 @keyframes run {
     to {
@@ -1403,14 +1405,16 @@ address a {
 ========================= */
 
 .lg img {
-    max-width: 82%;
-    max-height: 50px;
+    max-width: 90%;
+    max-height: 70px;
 
     width: auto;
     height: auto;
 
     object-fit: contain;
     display: block;
+
+    cursor: pointer;
 
     /* LANGSUNG CERAH */
     filter: grayscale(0%);
@@ -1680,4 +1684,29 @@ section#services p {
     font-size: 1rem;
     padding: 0 20px; 
   }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999; /* Memastikan modal ada di paling depan */
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 85%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
 }
